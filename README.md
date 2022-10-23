@@ -4,6 +4,15 @@ Repository ini dibuat dengan laravel 9 untuk sebagai contoh pendukung perkuliaha
 
 ## Instalasi
 - Clone repository ini
+```
+git clone https://github.com/dianprawira/laravel-todos.git
+cd laravel-todos/
+```
+- Jalankan composer install
+```
+composer install
+```
+
 - Konfigurasi file `.env`
 - Jalankan migration
 ```
