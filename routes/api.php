@@ -4,6 +4,7 @@ use App\Http\Controllers\KuliahController;
 use App\Http\Controllers\TaskController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,5 +33,11 @@ Route::get('tasks/{id}',[TaskController::class,'show']);
 Route::post('tasks/',[TaskController::class,'store']);
 Route::delete('tasks/{task}',[TaskController::class,'destroy']);
 Route::put('tasks/{id}',[TaskController::class,'update']);
+
+Route::post('/register',[AuthController::class,'register'])->name('register');
+Route::post('/login', [AuthController::class,'login'])->name('login');
+Route::middleware('auth:api')->get('/user', function (Request $request) {
+    return $request->user();
+});
 
 
