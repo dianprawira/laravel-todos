@@ -13,7 +13,11 @@ cd laravel-todos/
 composer install
 ```
 
-- Konfigurasi file `.env`
+- Save as file `.env.example` menjadi .env
+- Jalankan buat key laravel
+```
+php artisan key:generate
+```
 - Jalankan migration
 ```
 php artisan migrate
