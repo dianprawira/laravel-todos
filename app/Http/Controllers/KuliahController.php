@@ -10,7 +10,6 @@ class KuliahController extends Controller
 {
     public function tampil()
     {
-        $hasil = Kuliah::allData();
         return "hasil perkuliahan";
     }
 
@@ -24,7 +23,7 @@ class KuliahController extends Controller
     {
         $model = new Kuliah();
         $data = $model->pagi();
-        return "{$data} bersama {$id}";
+        return "$data bersama $id";
     }
 
     public function kuliahSiang(Request $request)
