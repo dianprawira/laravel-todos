@@ -22,7 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
 Route::get('kuliah',[KuliahController::class,'tampil']);
 Route::get('kuliah-sore',[KuliahController::class,'kuliahSore']);
 Route::get('kuliah-pagi/{id}',[KuliahController::class,'kuliahPagi']);
@@ -31,8 +30,8 @@ Route::post('kuliah-siang',[KuliahController::class,'kuliahSiang']);
 Route::get('taskorigin',[KuliahController::class,'showAllTask']);
 Route::post('inserttask',[KuliahController::class,'insertTask']);
 
-// Route::get('tasks',[TaskController::class,'index']);
-Route::get('tasks',[TaskOriginController::class,'semua']);
+Route::get('tasks',[TaskController::class,'index']);
+// Route::get('tasks',[TaskOriginController::class,'semua']);
 Route::get('tasks/{id}',[TaskController::class,'show']);
 Route::post('tasks/',[TaskController::class,'store']);
 Route::delete('tasks/{task}',[TaskController::class,'destroy']);
