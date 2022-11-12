@@ -68,7 +68,6 @@ class AuthController extends Controller
             ], 401);
         }
 
-        //if auth success
         return response()->json([
             'success' => true,
             'user'    => auth()->guard('api')->user(),    
