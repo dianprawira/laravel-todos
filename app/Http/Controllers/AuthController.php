@@ -74,4 +74,9 @@ class AuthController extends Controller
             'token'   => $token   
         ], 200);
     }
+
+    public function me()
+    {
+        return response()->json(auth()->user());
+    }
 }

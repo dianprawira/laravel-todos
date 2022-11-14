@@ -30,7 +30,8 @@ Route::post('kuliah-siang',[KuliahController::class,'kuliahSiang']);
 Route::get('taskorigin',[KuliahController::class,'showAllTask']);
 Route::post('inserttask',[KuliahController::class,'insertTask']);
 
-Route::get('tasks',[TaskController::class,'index']);
+Route::get('/tasks',[TaskController::class,'index']);
+Route::get('/me',[AuthController::class,'me'])->middleware('auth:api');
 // Route::get('tasks',[TaskOriginController::class,'semua']);
 Route::get('tasks/{id}',[TaskController::class,'show']);
 Route::post('tasks/',[TaskController::class,'store']);
