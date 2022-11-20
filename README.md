@@ -28,6 +28,10 @@ php artisan db:seed
 php artisan db:seed --class=TaskSeeder
 ```
 
+- Buat JWT Key
+```
+php artisan jwt:secret
+```
 ## Jalankan server
 ```
 php artisan serve --port=2022
